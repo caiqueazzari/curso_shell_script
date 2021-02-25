@@ -2,9 +2,7 @@
 
 #!/bin/bash
 
-read -p "Digite o nome de um arquivo ou de um diretório: " FILEORDIRECTORY
-
-FILE=$FILEORDIRECTORY
+read -p "Digite o nome de um arquivo ou de um diretório: " FILE
 
 if [ -e ${FILE} ]
 then
