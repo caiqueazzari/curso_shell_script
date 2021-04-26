@@ -4,23 +4,21 @@
 
 read -p "Digite o nome de um arquivo ou de um diretório: " FILE
 
-if [ -e ${FILE} ]
+if [ -e "$FILE" ]
 then
-        echo "${FILE} existe!"
+        echo "$FILE existe!"
 else
-        echo "${FILE} não existe ou o caminho não foi especificado."
+        echo "$FILE não existe ou o caminho não foi especificado."
 fi
 
-if [ -f ${FILE} ]
+if [ -f "$FILE" ]
 then
         echo "E é um arquivo normal!"
-        echo ""
-        ls -l ${FILE}
-fi
-
-if [ -d ${FILE} ]
+elif [ -d "$FILE" ]
 then
         echo "E é um diretório!"
-        echo ""
-        ls -l ${FILE}
+else
+	echo "Não é um arquivo e nem um diretório."
 fi
+
+ls -l $FILE

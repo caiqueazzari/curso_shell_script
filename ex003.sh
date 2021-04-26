@@ -4,5 +4,5 @@
 
 host=$(hostname)
 
-echo "This script is running on ${host}."
+echo "Este script está rodando no computador ${host}."
 
